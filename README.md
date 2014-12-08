@@ -44,23 +44,54 @@ mizzao:bootstrap-3       HTML, CSS, and JS framework for developing responsive, 
 service-configuration    Manage the configuration for third-party services
 ```
 
-> For security reasons `autopublish` and `insecure` packages are not included. (<a href="http://docs.meteor.com/#/full/dataandsecurity" target="_blank">read more</a>).
+> For security reasons `autopublish` and `insecure` packages were removed. (<a href="http://docs.meteor.com/#/full/dataandsecurity" target="_blank">read more</a>).
 
 ## Folder & Files Structure
 
-todo
+```
+> /client
+    > /lib
+    > /styles
+          custom.css
+    > /views
+          home.coffee
+          home.html
+      error.html
+      helpers.coffee
+      layout.html
+      router.coffee
+      startup.coffee
+> /collections
+> /lib
+> /public
+      favicon.ico
+> /server
+    > /lib
+    > /methods
+          home.coffee
+      publications.coffee
+      startup.coffee
+  settings.json
+
+```
 
 ## Conventions
 
-todo
+Now let's define some conventions for the different parts that conform our application.
 
 ### Templates
 
-todo
+A template is a snippet of HTML that can include dynamic data. Templates are defined in `.html` files that will be located inside `client/views` folder.
+
+The name of the file will be in **lowercase** and separated with **underscores**. For example, if you define `<template name="AboutMe">` then your file should be `about_me.html`.
+
+If your template have some *partials*. Put them in the same file as your main template and call them like this `<template name="AboutMe_PartialName">`.
 
 ### Views
 
-todo
+*Views* are just the dinamyc thing of templates. They are `.coffee` files that contains all the helpers, events and other stuff for a specific template.
+
+They live inside `client/views` folder. The filename will be the same as the `.html` file.
 
 ### Methods
 
