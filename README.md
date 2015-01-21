@@ -12,10 +12,8 @@ Aims to replace `meteor create your-app-name` every time you want to start a new
 
 First of all (and obvious), you need Meteor installed. Then:
 ```bash
-$ git clone https://github.com/juanifioren/meteor-coffee-boilerplate.git
-
-# Rename folder.
-$ mv meteor-coffee-boilerplate/ your-app-name/
+# Clone project.
+$ git clone https://github.com/juanifioren/meteor-coffee-boilerplate.git your-app-name
 
 # Run the app.
 $ cd your-app-name/ && meteor run
